@@ -200,7 +200,7 @@ public class Serial extends CordovaPlugin {
 					// create the intent that will be used to get the permission
 					PendingIntent pendingIntent;
 					if (Build.VERSION.SDK_INT > Build.VERSION_CODES.R) {
-						pendingIntent = PendingIntent.getBroadcast(cordova.getActivity(), 0, new Intent(UsbBroadcastReceiver.USB_PERMISSION), PendingIntent.FLAG_MUTABLE);
+						pendingIntent = PendingIntent.getBroadcast(cordova.getActivity(), 0, new Intent(UsbBroadcastReceiver.USB_PERMISSION), PendingIntent.FLAG_IMMUTABLE);
 					} else {
 						pendingIntent = PendingIntent.getBroadcast(cordova.getActivity(), 0, new Intent(UsbBroadcastReceiver.USB_PERMISSION), 0);
 					}
